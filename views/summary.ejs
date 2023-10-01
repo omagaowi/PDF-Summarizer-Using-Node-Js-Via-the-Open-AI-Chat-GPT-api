@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/summary.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.3-web/CSS/ALL.CSS">
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <a class="home-link" href="/">Back To Home</a>
+        <div class="drop-zone">
+            <div class="header">
+                <div class="filename">
+                    <p><%=title %></p>
+                </div>
+                <form class="send-form" action="/sendpdf" method="POST" enctype="multipart/form-data">
+                    <button type="button"><label for="file" class="add-file"><i class="fas fa-file"></i><input type="file" name="pdf" id="file"></label></button>
+                </form>
+            </div>
+            <div class="summary">
+                <div class="summary-content">
+                    <p><%=summary  %></p>
+                </div>
+            </div>
+            <div class="loading">
+                <div class="loader"></div>
+                <p>Reading File..</p>
+            </div>
+            <div class="fileReady">
+                <i class="fas fa-times"></i>
+                <img src="/file.png" alt="">
+                <p></p>
+                <button class="submitBtn">Start</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
